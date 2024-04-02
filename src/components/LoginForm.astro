@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="form-header"></div>
+    <div class="card">
+        <div id="notification-inline"></div>
+      <h1>Log in Mijn ING</h1>
+      <h4>Username</h4>
+      <!-- Voorbereiding voor het dynamisch invoerveld -->
+      <div id="username-input"></div>
+      <h4>Password</h4>
+      <!-- Voorbereiding voor het dynamisch wachtwoordveld -->
+      <div id="password-input"></div>
+      <label><input class="checkbox-input" type="checkbox"> Remember my username</label>
+      <!-- Voorbereiding voor de checkbox en submit button -->
+      <div id="action-button"></div><a class="login-details" href="#">Lost your login details?</a>
+
+    </div>
+    <div class="links">
+        <a class="link" href="#">Join ING</a>
+        <a class="link" href="#">Secure Banking</a>
+        <a class="link" href="#">Privacy and cookies</a>
+        <a class="link" href="#">Disclaimer</a>
+      </div>
+  </div>
+
+<style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh; 
+      flex-direction: column;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background-color: #FFFFFF;
+      width: 30rem; /* This will be scaled down on smaller screens */
+      padding: 20px;
+      box-sizing: border-box; 
+    }
+
+    .form-header {
+        border-bottom: 2px solid;
+        border-color: lightgray;
+        width: 30rem; /* This will also be adjusted for smaller screens */
+        height: 3rem;
+        background-color: #FFFFFF;
+    }
+
+    h1 {
+      color: #FF6200;
+      font-size: 25px;
+    }
+
+    h4 {
+        color: gray;
+        font-weight: lighter;
+    }
+
+    .submit-button {
+      background-color: #FF6200; 
+      border-radius: 8px;
+      color: #FFFFFF;
+      border: none;
+      padding: 10px;
+      padding : 10px 20px 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 20px 0; 
+    }
+
+    .checkbox-input {
+        margin: 20px 0;
+    }
+
+    .login-details {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 2rem;
+    }
+
+    .links {
+        padding-top: 2rem;
+    }
+
+    .link {
+        color: gray;
+        padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .card, .form-header {
+        width: 90%; /* Adjust width to be more flexible on smaller screens */
+        margin: 0 auto; /* Ensure it stays centered */
+      }
+    }
+</style>

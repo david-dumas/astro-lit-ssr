@@ -1,0 +1,33 @@
+{
+  "name": "bustling-belt",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.6",
+    "@astrojs/lit": "^4.0.1",
+    "@lion/ui": "^0.5.4",
+    "astro": "^4.4.7",
+    "ing-web": "^3.0.0",
+    "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "@lit/reactive-element": "^2.0.0",
+    "ing-web": {
+      "lit": "^3.0.0",
+      "lit-html": "^3.0.0",
+      "lit-element": "^4.0.0"
+    },
+    "@lion/ui": {
+      "lit": "^3.0.0",
+      "lit-html": "^3.0.0",
+      "lit-element": "^4.0.0"
+    }
+  }
+}

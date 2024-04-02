@@ -1,0 +1,38 @@
+---
+import LoginForm from '../components/LoginForm.astro';
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <LoginForm />
+  <script type="module">
+    import '../../src/components/NotificationInline.js'
+    import '../../src/components/ActionButton.js';
+    import '../../src/components/PasswordInput.js';
+    import '../../src/components/UsernameInput.js';
+
+    const notificationSlot = document.getElementById('notification-inline');
+    const notificationInline = document.createElement('notification-inline');
+    notificationSlot.appendChild(notificationInline)
+
+    const usernameSlot = document.getElementById('username-input');
+    const usernameInput = document.createElement('username-input');
+    usernameSlot.appendChild(usernameInput)
+
+    const passwordSlot = document.getElementById('password-input');
+    const passwordInput = document.createElement('password-input');
+    passwordSlot.appendChild(passwordInput)
+    
+    const actionSlot = document.getElementById('action-button');
+    const actionButton = document.createElement('action-button');
+    actionSlot.appendChild(actionButton)
+
+    
+  </script>
+</body>
+</html>
+</Layout>

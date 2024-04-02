@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { LoginForm } from '../components/LoginForm.js'
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<LoginForm client:only></LoginForm>
+		</main>
+</Layout>
+
+<style>
+	
+</style>
