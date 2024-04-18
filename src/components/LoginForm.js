@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit"; 
-// import { IngButton } from 'ing-web/button';
+import { IngButton } from 'ing-web/button';
 import { IngNotificationInline } from "ing-web/notification-inline.js";
 import { IngInput } from 'ing-web/input.js';
 
@@ -16,7 +16,7 @@ export class LoginForm extends LitElement {
     .card {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       background-color: #FFFFFF;
-      width: 30rem; /* This will be scaled down on smaller screens */
+      width: 30rem;
       padding: 20px;
       box-sizing: border-box; 
     }
@@ -24,7 +24,7 @@ export class LoginForm extends LitElement {
     .form-header {
         border-bottom: 2px solid;
         border-color: lightgray;
-        width: 30rem; /* This will also be adjusted for smaller screens */
+        width: 30rem;
         height: 3rem;
         background-color: #FFFFFF;
     }
@@ -78,8 +78,8 @@ export class LoginForm extends LitElement {
 
      @media (max-width: 600px) {
       .card, .form-header {
-        width: 90%; /* Adjust width to be more flexible on smaller screens */
-        margin: 0 auto; /* Ensure it stays centered */
+        width: 90%;
+        margin: 0 auto;
       }
     }
   `;
@@ -108,8 +108,10 @@ export class LoginForm extends LitElement {
             <ing-input label="username" name="username"></ing-input>
             <h4>Password</h4>
             <input type="password" name="password" label="Password" .modelValue=${''} />
+            
             <label><input class="checkbox-input" type="checkbox" label="Remember my username"> Remember my username</label>
             <br>
+            <ing-button>Log In</ing-button>
             <a class="login-details" href="#">Lost your login details?</a>
           </form>
         </div>
@@ -133,9 +135,7 @@ export class LoginForm extends LitElement {
     }
 
     customElements.define('login-form', LoginForm);
-    // customElements.define('ing-button', IngButton); 
+    customElements.define('ing-button', IngButton); 
     customElements.define('ing-input', IngInput)
     customElements.define('ing-notification-inline', IngNotificationInline);
-
-    //<input type="text" name="userName" label="Username" .modelValue=${''} />
     
